@@ -3,7 +3,8 @@ import './App.css'
 import Header from './Header.jsx'
 import Temperature from './Temperature.jsx'
 import axios from 'axios'
-import { getCode, getName } from 'country-list'
+import { getName } from 'country-list'
+import LoaderLogo from './components/LoaderLogo'
 
 function App() {
 
@@ -75,11 +76,11 @@ function App() {
 
 
 
-  if(!weather) return <img src="/img/loader/loading.gif" alt="" />
+  if(!weather) return <LoaderLogo />
 
   return (
     <div className="App h-screen bg-city bg-cover object-cover" >
-      <div className=" h-[70%] bg-gradient-to-t from-black/60 lg:h-[100%]">
+      <div className=" h-[90%] bg-gradient-to-t from-black/60 lg:h-[100%]">
         <Header />
         <main>
           <section>
@@ -88,7 +89,7 @@ function App() {
                 <Temperature weather={weather} temp={temp}/>
               </div>
               <div className='bg-gradient-to-b from-[#3459D8] to-[#067B8B] rounded-t-[80px] lg:row-start-2 lg:row-end-4 lg:col-[7_/span_4] lg:rounded-[60px] lg:max-h-[400px] 2xl:col-[7_/span_3]'>
-                <div className="container grid gap-2 relative">
+                <div className="container grid relative">
                   <span className="material-symbols-outlined  font-medium text-7xl absolute left-1/2 translate-x-[-50%] top-[-50px] fill-white lg:hidden">
                     distance
                   </span>
