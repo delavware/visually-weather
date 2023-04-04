@@ -1,0 +1,32 @@
+
+.bg-city {
+background-image: url('/img/bg/bg-asuncion.jpg');
+}
+
+
+.txt-black-color {
+    color: #282828;
+}
+
+input:focus::-webkit-input-placeholder {
+	color : transparent;
+}
+input:focus::-moz-placeholder {
+	color : transparent;
+}
+input:-moz-placeholder {
+	color : transparent;
+}
+input:focus::-webkit-input-placeholder {
+	opacity : 0;
+}
+input:focus::-moz-placeholder {
+	opacity : 0;
+}
+input:-moz-placeholder {
+	opacity : 0;
+}
+
+.button-disabled {
+pointer-events: none;
+}
